@@ -6,22 +6,13 @@
   "version": "1.0",
 
   "permissions": [
-    "tabs"
+    "activeTab"
   ],
-
-  "background": {
-    "persistent": false,
-    "scripts": ["background.js"]
-  },
 
   "content_scripts": [
     {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "monospacer.js"
-      ],
+      "matches": ["*://*/*"],
+      "js": ["monospacer.js"],
       "run_at": "document_end",
       "all_frames": true
     }

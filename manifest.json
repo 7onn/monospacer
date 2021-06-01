@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Monospacer",
+  "description": "Set every font-family to monospace",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "monospacer.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}

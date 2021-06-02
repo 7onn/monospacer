@@ -11,8 +11,12 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["monospacer.js"],
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "monospacer.js"
+      ],
       "run_at": "document_end",
       "all_frames": true
     }

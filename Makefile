@@ -8,4 +8,5 @@ help:
 
 PHONY: zip
 zip:
-	@zip monospacer.zip ./*
+	@mkdir versions/$$(git rev-parse HEAD) || true
+	@zip versions/$$(git rev-parse HEAD)/monospacer.zip ./*
